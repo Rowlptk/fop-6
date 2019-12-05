@@ -1,11 +1,126 @@
 #include<stdio.h>
 #include<string.h>
+#include<time.h>
+void delay(unsigned int mseconds)
+{
+    clock_t goal = mseconds + clock();
+    while (goal > clock());
+}
 
 void login();
+void menu();
+void checkbalance();
+void withdraw();
+void deposit();
+void proceed();
+
+int totalBalance = 6000;
 
 void main()
 {
     login();
+}
+
+void proceed()
+{
+    char ch;
+    printf("\nPress Y to continue... ");
+    scanf(" %c",&ch);
+    if(ch=='Y'||ch=='y')
+    {
+        menu();
+    }
+    else
+    {
+        printf("Thank you for Banking!\n\nSee you soon...\n");
+    }
+}
+
+
+void deposit()
+{
+    int da;
+    printf("Enter Deposit Amount : ");
+    scanf("%d",&da);
+    if(da<=5000)
+    {
+        totalBalance += da;
+        printf("\nDeposited Amount : $ %d\n",da);
+        delay(2000);
+        printf("\nCurrent Balance : $ %d\n",totalBalance);
+    }
+    else
+    {
+        printf("\nAmount Exceeds Per transaction amount\n");
+    }
+}
+
+void withdraw()
+{
+    int wa;
+    printf("\nEnter Withdraw Amount : ");
+    scanf("%d",&wa);
+    if( wa%500 == 0)
+    {
+        if( wa <= totalBalance )
+        {
+            if( wa <= 5000 )
+            {
+                //totalBalance = totalBalance - wa;
+                totalBalance -= wa;
+                printf("\nWithdraw Amount : $ %d",wa);
+                printf("\nAvailable Balance : $ %d\n",totalBalance);
+            }
+            else
+            {
+                printf("\nAmount must be less than  $ 5000\n");
+            }
+        }
+        else
+        {
+            printf("\nInsufficient Balance!\n");
+        }
+    }
+    else
+    {
+        printf("\nAmount should be multiple of 500\n");
+    }
+}
+
+void checkbalance()
+{
+    printf("\nYour current Balance is $ %d\n",totalBalance);
+}
+
+
+void menu()
+{
+    int opt;
+    printf("********* Welcome to Avengers Bank *********\n");
+    printf("Options :\n1.Check Balance\n2.Withdraw\n3.Deposit\n4.Exit\n  Select : ");
+    scanf("%d",&opt);
+    system("cls");
+    switch(opt)
+    {
+    case 1:
+        checkbalance();
+        proceed();
+        break;
+    case 2:
+        withdraw();
+        proceed();
+        break;
+    case 3:
+        deposit();
+        proceed();
+        break;
+    case 4:
+        exit(0);
+
+    default:
+        printf("\nInvalid option!\n");
+        proceed();
+    }
 }
 
 void login()
@@ -28,10 +143,12 @@ void login()
         }
     }
 
-
+    system("cls");
     if(flag == 1 && (strcmp(super_pwd[i],pwd) == 0))
     {
-        printf("\nWelcome %s\n",usr);
+        printf("\nWelcome %s\n\n",usr);
+        menu();
+
     }
     else
     {
