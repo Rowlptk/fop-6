@@ -46,7 +46,7 @@ void deposit()
     {
         totalBalance += da;
         printf("\nDeposited Amount : $ %d\n",da);
-        delay(2000);
+
         printf("\nCurrent Balance : $ %d\n",totalBalance);
     }
     else
