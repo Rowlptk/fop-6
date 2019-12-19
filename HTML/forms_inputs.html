@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms & Inputs</title>
+</head>
+<body>
+    <form>
+        <label for="usr">User Name</label>
+        <input type="text" id="usr" value="admin">
+        
+        <br><br>
+        <label for="pwd">Password</label>
+        <input type="password" id="pwd" required>
+        
+        <br><br>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="abc@example.com.np">
+
+        <br><br>
+        <label for="txtarea">Comment : </label>
+        <br>
+        <textarea id="txtarea" cols="30" rows="5"></textarea>
+
+        <br><br>
+        <label for="doc">Identity : </label>
+        <input type="file" id="doc">
+
+        <br><br>
+        <label for="gender">Gender : </label>
+        <input type="radio" name="g" id="gender" value="male" checked>Male
+        <input type="radio" name="g" id="gender" value="female">Female
+        <input type="radio" name="g" id="gender" value="others" disabled>Others
+
+        <br><br>
+        <label for="Q">Qualification : </label>
+        <input type="checkbox" name="Q" id="Q" value=1 checked>SLC
+        <input type="checkbox" name="Q" id="Q" value=2 checked>Plus Two
+        <input type="checkbox" name="Q" id="Q" value=3>Bachelors
+        <input type="checkbox" name="Q" id="Q" value=4>Masters
+        
+        <br><br>
+        <label for="Bday">Birth Date</label>
+        <input type="date" name="Bday" id="Bday">
+
+        <br><br>
+        <label for="age">Age : </label>
+        <input type="number" id="age">
+
+        <br><br>
+        <label for="country">Nationality : </label>
+        <select name="" id="country">
+            <option value="" disabled selected>Choose</option>
+            <option value="nepal">Nepal</option>
+            <option value="usa" >USA</option>
+            <option value="canada">CANADA</option>
+            <option value="uk">UK</option>
+            <option value="india">INDIA</option>
+        </select>
+
+        <br><br>
+        <input type="submit" value="Sign Up">
+
+    </form>
+</body>
+</html>
