@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5 Semantic Tags</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        #header {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #sidebar {
+            width: 29%;
+            float: right;
+        }
+
+        #main {
+            width: 69%;
+            float: left;
+        }
+
+        .text-center{
+            display: block;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>My Website</h1>
+        <p>Just Another Website</p>
+    </header>
+
+    <aside id="sidebar">
+        <h3>Navigation</h3>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h3>Contact US</h3>
+        <ul>
+            <li><strong>Address:</strong> 50 Main st, Boston MA</li>
+            <li><strong>Phone:</strong> (555) 555-5555</li>
+            <li><strong>Email:</strong>me@somethingcool.com</li>
+        </ul>
+    </aside>
+
+    <main id="main">
+        <section id="welcome">
+            <h2>Welcome To Our Website</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus similique asperiores voluptatem at quae atque blanditiis necessitatibus consequuntur a sequi veritatis corrupti, qui consectetur obcaecati, debitis dicta ducimus incidunt possimus.
+                <br>
+            <a href="#" class="text-center">Click for More</a></p>
+        </section>
+        <section id="blog">
+            <article>
+                <h3>Article One</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia necessitatibus a veritatis vero minus dolore porro ducimus quae nisi sapiente eius ipsum, iure, obcaecati accusamus laboriosam corporis? Neque, quidem cupiditate.</p>
+            </article>
+            <article>
+                <h3>Article Two</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia necessitatibus a veritatis vero minus dolore porro ducimus quae nisi sapiente eius ipsum, iure, obcaecati accusamus laboriosam corporis? Neque, quidem cupiditate.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
