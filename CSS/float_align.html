@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Float & Align</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.4em;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 30px auto;
+            /*border: 1px solid #ccc;*/
+        }
+
+        .box {
+            background: #f4f4f4;
+            border: 1px solid #333;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .box p {
+            /* Text Align */
+            text-align: left;
+            text-align: right;
+            text-align: center;
+            text-align: justify;
+        }
+        .clr {
+            clear:both;
+        }
+
+        #box-2{
+            width: 68%; 
+            float: left;   
+        }
+
+        #box-3{
+            width: 30%;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="box-1" class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic veritatis quis dolorum consequuntur vero, eius itaque voluptas explicabo iure velit?</p>
+        </div>
+        <div id="box-2" class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic veritatis quis dolorum consequuntur vero, eius itaque voluptas explicabo iure velit?</p>
+        </div>
+        <div id="box-3" class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic veritatis quis dolorum consequuntur vero, eius itaque voluptas explicabo iure velit?</p>
+        </div>
+
+        <div class="clr"></div>
+
+        <div id="box-4" class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic veritatis quis dolorum consequuntur vero, eius itaque voluptas explicabo iure velit?</p>
+        </div>
+    </div>
+</body>
+</html>
