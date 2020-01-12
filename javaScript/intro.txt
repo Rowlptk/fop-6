@@ -1,0 +1,25 @@
+javascript ==> web based programming language
+resposible actions
+
+click ==> 
+submit
+keyup ==> search
+clock
+countdowntimer
+mathematical calculation
+replace
+show
+hide
+style
+dynamically
+
+html
+
+7 days
+
+4 programming
+2 DOM manipulation
+1 task manager ==> LS ==> JSON
+
+
+
