@@ -48,6 +48,7 @@ val = firstName.slice(0,4);
 
 val = firstName.slice(-7);
 
+
 // split()
 val = str.split(' ');
 val = tags.split(',');
