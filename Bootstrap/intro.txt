@@ -1,0 +1,15 @@
+bootstrap ==> html css js ==> framework
+speed development
+
+classes ==> 
+
+bootstrap ==> 4
+
+mobile first approach ==> responsive'
+
+
+download
+
+CDN ==> Content Delivery Network
+
+getbootstrap.com
