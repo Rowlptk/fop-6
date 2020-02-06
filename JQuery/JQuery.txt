@@ -1,0 +1,17 @@
+Jquery is write less do more javascript library
+
+effects, 
+
+1. download ==> code.jquery.com
+2. CDN ==> developers.google.com/speed/libraries
+
+<script> 
+
+$(document).ready(function (){
+    $(selector).action();
+})
+
+// css, on method, hide, show, fading effect, sliding effect, animate
+// events
+
+</script>

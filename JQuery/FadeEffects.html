@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fade Effects</title>
+</head>
+<body>
+    <button id="f1">fadeIn</button>
+    <button id="f2">fadeOut</button>
+    <button id="f3">fadeToggle</button>
+    <button id="f4">fadeTo</button>
+
+    <br><br>
+    <div id="div" style="background: #333; color: white; padding: 10px;">Hello Nissan Click for more!</div>
+    <div id="panel" style="border: 2px solid red; display: none; background: yellow;">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis porro nam animi quaerat mollitia dignissimos hic quibusdam, harum laborum vel eius ex, nostrum nihil maiores sequi? Blanditiis magni molestiae reprehenderit!</p>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+            $(function() {
+            /*$('#div').mouseenter(function() {
+                $('#panel').slideDown(2000);
+            })
+            $('#div').mouseout(function() {
+                $('#panel').slideUp(2000);
+            })*/
+            $('#div').click(function() {
+                $('#panel').slideToggle();
+            })
+
+
+
+           $('#f1').click(function(){
+               $('#panel').fadeIn(2000);
+           })
+           $('#f2').click(function(){
+               $('#panel').fadeOut(5000);
+           })
+           $('#f3').click(function(){
+               $('#panel').fadeToggle(1000);
+           })
+           $('#f4').click(function(){
+               $('#panel').fadeTo(3000, 0.1);
+           })
+        })
+    </script>
+</body>
+</html>

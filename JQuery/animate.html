@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animate</title>
+</head>
+<body>
+    <button>Animate</button>
+
+    <br><br>
+    <div style="background-color:brown; height:100px; width: 100px; position: relative;">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            let count = 1 ;
+           $('button').click(function loop() {
+               $('div').animate({top: '0px', left: '0px'});
+               $('div').animate({top: '500px', left: '500px'}, 100);
+               $('div').animate({top: '200px', left: '500px'}, 100);
+               $('div').animate({top: '500px', left: '500px'}, 100);
+               count++;
+               if(count <= 3)
+                    loop();
+           })
+        })
+    </script>
+    </div>
+</body>
+</html>
