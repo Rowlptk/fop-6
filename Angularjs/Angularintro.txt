@@ -1,0 +1,16 @@
+AngularJS ==> javascript framework
+
+MVC pattern==>
+
+M ==> model ==> data
+V ==>  view ==> presentation layer
+C ==> Controller ==> data control on view
+
+
+$, ng-
+
+ng- ==> directives 
+
+SPA ==> Single Page Application ==> Angular routing
+
+download ==> angularjs.org

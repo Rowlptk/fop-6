@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angularjs</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <h1>{{str}}</h1>
+        <h1>{{str | uppercase}}</h1>
+        <h1>{{str | lowercase}}</h1>
+
+        <h1>{{money | currency}}</h1>
+        <h1>{{money*114.65 | currency:'NPR '}}</h1>
+        <h1>{{money*0.78 | currency:'&pound;'}}</h1>
+
+        <h1>{{today | date}}</h1>
+        <h1>{{today | date:'y-MM-d'}}</h1>
+        <h1>{{today | date:'shortDate'}}</h1>
+
+        <input type="text" ng-model="search">
+        <ul>
+            <li ng-repeat="animal in animals | filter:search">{{animal}}</li>
+        </ul>
+
+    </div>
+
+    <script>
+        var app = angular.module('myApp',[]);
+        app.controller('myCtrl',function($scope){
+            $scope.str = 'Hello';
+            $scope.money = 100;
+            $scope.today = new Date();
+            $scope.animals = ['dog', 'cat', 'monkey', 'donkey', 'hippo', 'rhino', 'dynosaur', 'rat' ];
+        })
+    </script>
+</body>
+</html>

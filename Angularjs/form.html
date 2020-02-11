@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angularjs</title>
+    <style>
+        input.ng-valid {
+            background-color: green;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+</head>
+<body ng-app="">
+    <!-- $valid, $invalid, $dirty, $pristine, $touched, $untoched -->
+    <!-- .ng-valid -->
+    <form name="myForm">
+        <input type="text" ng-model="in1" name="myIn1" required placeholder="valid">
+        <span>{{myForm.myIn1.$valid}}</span>
+
+        <input type="text" ng-model="in2" name="myIn2" required placeholder="invalid">
+        <span>{{myForm.myIn2.$invalid}}</span>
+        
+        <input type="text" ng-model="in3" name="myIn3" required placeholder="dirty">
+        <span>{{myForm.myIn3.$dirty}}</span>
+        
+        <input type="text" ng-model="in4" name="myIn4" required placeholder="pristine">
+        <span>{{myForm.myIn4.$pristine}}</span>
+        
+        <input type="text" ng-model="in5" name="myIn5" required placeholder="touched">
+        <span>{{myForm.myIn5.$touched}}</span>
+        
+        <input type="text" ng-model="in6" name="myIn6" required placeholder="untouched">
+        <span>{{myForm.myIn6.$untouched}}</span>
+    </form>
+
+
+</body>
+</html>

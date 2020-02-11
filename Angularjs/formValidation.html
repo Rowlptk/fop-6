@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angularjs</title>
+    <style>
+        span {
+            color:red;
+            font-size: 11px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+</head>
+<body ng-app="">
+    <form name="myForm" novalidate>
+        <div>
+            <label for="name">Name : </label>
+            <br>
+            <input type="text" ng-model="myUser" name="myUser" id="name" required placeholder="ex:RAM">
+            <span ng-show="myForm.myUser.$dirty && myForm.myUser.$error.required">*Name is Required</span>
+        </div>
+        <div>
+            <label for="">Email : </label>
+            <br>
+            <input type="email" ng-model="myEmail" name="myEmail" id="email" required
+            placeholder="ex:abc@example.com">
+            <span ng-show="myForm.myEmail.$dirty && myForm.myEmail.$invalid">
+                <span ng-show="myForm.myEmail.$error.required">*Email is required</span>
+                <span ng-show="myForm.myEmail.$error.email">*Email is invalid</span>
+            </span>
+        </div>
+        <br>
+        <input type="submit" value="click" ng-disabled="myForm.$invalid">
+    </form>
+</body>
+</html>
